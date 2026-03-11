@@ -23,7 +23,7 @@ public class TaskController {
 
     @GetMapping
     public List<Task> getAllTasks() {
-        return service.getAllTasks();
+        return service.getAllTasks()
     }
 
     @PutMapping("/{id}")

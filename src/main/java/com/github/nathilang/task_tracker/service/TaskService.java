@@ -23,6 +23,11 @@ public class TaskService {
         return repository.findAll();
     }
 
+    public Task getTask(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Task not found with id: " + id));
+    }
+
     public Task updateTask(Long id, Task updatedTask) {
         return repository.findById(id)
                 .map(task -> {

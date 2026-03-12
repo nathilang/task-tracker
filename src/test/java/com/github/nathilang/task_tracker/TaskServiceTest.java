@@ -58,4 +58,5 @@ class TaskServiceTest {
         assertEquals("New Task", result.getTitle());
         verify(repository, times(1)).save(task);
     }
+
 }
